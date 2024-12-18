@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>人際互動小測驗</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 歡迎頁面 -->
+        <div id="startPage" class="text-center">
+            <div class="welcome-banner">
+                <h1>🤝 人際互動小測驗 🤝</h1>
+            </div>
+            
+            <div class="welcome-message">
+                <div class="message-box">
+                    <p class="message-title">✨ 歡迎來到互動小天地 ✨</p>
+                    <ul class="instruction-list">
+                        <li>👥 測試你的社交技巧</li>
+                        <li>🎯 5題精選情境題</li>
+                        <li>💫 即時互動回饋</li>
+                        <li>🌈 探索人際互動的奧妙</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mascot-container">
+                <div class="mascot-speech">準備好開始了嗎？讓我��一起學習吧！ 💫</div>
+            </div>
+
+            <div class="upload-section">
+                <input type="file" id="fileUpload" accept=".xlsx, .xls" style="display: none;">
+                <button id="uploadBtn" class="btn upload-btn">
+                    <span>📚 載入題庫</span>
+                </button>
+                <div id="fileName" class="file-name"></div>
+                <button id="startBtn" class="btn start-btn" disabled>
+                    <span>✨ 開始測驗</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 測驗頁面 -->
+        <div id="quizContainer" style="display: none;">
+            <div class="quiz-header">
+                <h2>🤝 人際互動測驗 🤝</h2>
+                <p class="quiz-instruction">請仔細閱讀題目後作答</p>
+            </div>
+            <div class="questions-container"></div>
+            <button id="submitBtn" class="btn submit-btn">📝 完成作答</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html> 

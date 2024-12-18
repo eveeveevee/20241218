@@ -1,0 +1,222 @@
+/* 整體風格 */
+body {
+    font-family: 'Comic Sans MS', '微軟正黑體', sans-serif;
+    background: linear-gradient(135deg, #FFE5E5 0%, #E5F3FF 100%);
+    color: #6B5876;
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(107, 88, 118, 0.15);
+}
+
+/* 歡迎頁面 */
+.text-center {
+    text-align: center;
+}
+
+.welcome-banner h1 {
+    color: #8B7B8B;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-box {
+    background-color: #FFF5F5;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(139, 123, 139, 0.1);
+    border: 3px solid #FFE0E0;
+}
+
+.message-title {
+    font-size: 1.3em;
+    color: #8B7B8B;
+    margin-bottom: 20px;
+}
+
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instruction-list li {
+    margin: 15px 0;
+    padding: 12px 20px;
+    background-color: #FFF;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.instruction-list li:hover {
+    transform: translateX(10px);
+    background-color: #FFE5E5;
+}
+
+/* 吉祥物對話框 */
+.mascot-container {
+    margin: 30px 0;
+}
+
+.mascot-speech {
+    display: inline-block;
+    background-color: #FFF;
+    padding: 15px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(139, 123, 139, 0.15);
+    font-size: 1.2em;
+    color: #8B7B8B;
+    position: relative;
+    animation: float 3s infinite;
+}
+
+/* 按鈕樣式 */
+.btn {
+    background-color: #B4A3B4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #9B8B9B;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #D1C7D1;
+    cursor: not-allowed;
+}
+
+.upload-btn {
+    background-color: #9B6DDF;
+}
+
+.start-btn {
+    background-color: #6D9BDF;
+}
+
+.submit-btn {
+    background-color: #DF6D9B;
+}
+
+/* 檔案名稱顯示 */
+.file-name {
+    margin: 10px 0;
+    color: #8B7B8B;
+}
+
+/* 測驗頁面 */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-header h2 {
+    color: #8B7B8B;
+    margin-bottom: 10px;
+}
+
+.quiz-instruction {
+    color: #B4A3B4;
+    font-size: 1.1em;
+}
+
+/* 題目樣式 */
+.question {
+    background-color: #FFF;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(139, 123, 139, 0.1);
+    border: 3px solid #FFE0E0;
+    position: relative;
+}
+
+.question p[data-number]:before {
+    content: attr(data-number) ' 💭';
+    background-color: #B4A3B4;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: -10px;
+    top: -15px;
+}
+
+.options label {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 20px;
+    background-color: #FFF5F5;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #FFE5E5;
+    transform: translateX(10px);
+}
+
+/* 動畫效果 */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 結果頁面 */
+.result-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.result-content {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFF;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(139, 123, 139, 0.2);
+    max-width: 80%;
+}
+
+.result-emoji {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.score-display {
+    font-size: 2em;
+    color: #8B7B8B;
+    margin: 20px 0;
+}
+
+.encouragement {
+    color: #B4A3B4;
+    font-size: 1.2em;
+    margin: 20px 0;
+} 
